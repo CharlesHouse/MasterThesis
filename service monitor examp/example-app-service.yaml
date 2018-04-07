@@ -5,9 +5,9 @@ metadata:
   labels:
     app: example-app
 spec:
+  type: NodePort
   selector:
     app: example-app
-    type: NodePort
   ports:
   - name: web
     port: 8080
