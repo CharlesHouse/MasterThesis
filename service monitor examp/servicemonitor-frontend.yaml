@@ -1,13 +1,11 @@
 apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
+kind: Prometheus
 metadata:
-  name: frontend
-  labels:
-    tier: frontend
+  name: prometheus
 spec:
-  selector:
+  serviceMonitorSelector:
     matchLabels:
-      tier: frontend
-  endpoints:
-  - port: web
-    interval: 10s
+      team: frontend
+  resources:
+    requests:
+      memory: 400Mi
