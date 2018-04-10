@@ -33,3 +33,5 @@ spec:
         - name: web
           containerPort: 8080
           protocol: TCP
+      nodeSelector:
+        vdc: node1
