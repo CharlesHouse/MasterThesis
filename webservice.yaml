@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: webservice 
-        image: bestcharles/webservice4
+        image: bestcharles/testapp4
         ports:
         - name: web
           containerPort: 8080
